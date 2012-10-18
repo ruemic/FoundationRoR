@@ -4,14 +4,25 @@
 
 
 // Add some light border to see what Foundation is doing with layout
-.row { border: 1px solid #eee;}
+.row { border: 1px solid #eee; }
 .columns { border: 1px solid #eee; }
 
+// Github Fork
+.github {
+  margin-top: 1em;
+  i, p {
+    @include inline-block;
+  }
+}
+.foundicon-github {
+  font-size: 3em;
+}
 
+// Entries Index View
 #entries-index {
   h1 { text-align: center; }
   table { width: 100%; }
-  .button { margin-bottom: 2em;}
+  .button { margin-top: 1em; }
 }
 
 .entry-index-item {
@@ -30,7 +41,7 @@
 // Basic Layout for CRUD Views
 .CRUD-base {
   @extend .row;
-  >div {
+  > div {
     @extend .six;
     @extend .columns;
     @extend .offset-by-three;
@@ -47,3 +58,5 @@
   @extend .button;
   @extend .secondary;
 }
+
+

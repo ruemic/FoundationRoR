@@ -1,6 +1,15 @@
 <div id="entries-index">
 <div class="row">
-  <h1 class="six columns offset-by-three">Listing entries</h1>
+  <div class="three columns github">
+    <a href="https://github.com/ruemic/FoundationRoR">
+      <i class="social foundicon-github"></i>
+      <p>Fork me on Github<p>
+    </a>
+  </div>
+  <h1 class="six columns">Listing entries</h1>
+  <div class="two columns">
+    <a href="#" class="button" data-reveal-id="helpModal"> Need Help? </a>
+  </div>
 </div>
 <div class="row">
   <div class="six columns offset-by-three">
@@ -18,7 +27,7 @@
           <%= entry.name %>
         </td>
         <td>
-          <%= link_to '<i class="foundicon-monitor"></i>'.html_safe, entry %>
+          <%= link_to '<i class="foundicon-smiley"></i>'.html_safe, entry %>
         </td>
         <td>
           <%= link_to '<i class="foundicon-edit"></i>'.html_safe, edit_entry_path(entry) %>
@@ -34,10 +43,21 @@
   <%= link_to 'New Entry', new_entry_path, :class => "button four columns offset-by-four" %>
   </div>
 
-  <div class="four columns">
-  </div>
-
 
 
 </div>
 </div>
+
+
+<div id="helpModal" class="reveal-modal medium">
+  <h2>It's Simple.</h2>
+  <p class="lead">Just add your name to the list</p>
+  <a class="close-reveal-modal">&#215;</a>
+</div>
+
+
+
+
+
+
+
