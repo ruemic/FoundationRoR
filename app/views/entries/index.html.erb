@@ -1,0 +1,43 @@
+<div id="entries-index">
+<div class="row">
+  <h1 class="six columns">Listing entries</h1>
+</div>
+<div class="row">
+  <div class="six columns">
+    <table>
+      <tr>
+        <th>Name</th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+
+    <% @entries.each do |entry| %>
+      <tr class="entry-index-item">
+        <td>
+          <%= entry.name %>
+        </td>
+        <td>
+          <%= link_to '<i class="foundicon-monitor"></i>'.html_safe, entry %>
+        </td>
+        <td>
+          <%= link_to '<i class="foundicon-edit"></i>'.html_safe, edit_entry_path(entry) %>
+        </td>
+        <td>
+          <%= link_to '<i class="foundicon-trash"></i>'.html_safe, entry, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  <br />
+
+  <%= link_to 'New Entry', new_entry_path, :class => "button four columns offset-by-four" %>
+  </div>
+
+  <div class="four columns">
+  </div>
+
+
+
+</div>
+</div>

@@ -1,0 +1,28 @@
+// Place all the styles related to the Entries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+// Add some light border to see what Foundation is doing with layout
+.row { border: 1px solid #eee;}
+.columns { border: 1px solid #eee; }
+
+
+#entries-index {
+  h1 { text-align: center; }
+  table { width: 100%; }
+  .button { margin-bottom: 2em;}
+}
+
+.entry-index-item {
+  td {
+    text-align: center;
+    vertical-align: middle;
+    @include adjust-font-size-to(25px);
+  }
+  td a {
+    color: black;
+    @include adjust-font-size-to(26px);
+    &:hover { color: red; background: none;}
+  }
+}
