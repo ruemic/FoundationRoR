@@ -1,6 +1,12 @@
+<div class='CRUD-base'>
+<div>
+
 <h1>Editing entry</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @entry %> |
-<%= link_to 'Back', entries_path %>
+<%= link_to 'Show', @entry, :class => "edit-entry-link" %>
+<%= link_to 'Back', entries_path, :class => "back-link"  %>
+
+</div>
+</div>

@@ -26,3 +26,24 @@
     &:hover { color: red; background: none;}
   }
 }
+
+// Basic Layout for CRUD Views
+.CRUD-base {
+  @extend .row;
+  >div {
+    @extend .six;
+    @extend .columns;
+    @extend .offset-by-three;
+  }
+}
+.submit-entry {
+  @extend .button;
+  @extend .success;
+}
+.edit-entry-link {
+  @extend .button;
+}
+.back-link {
+  @extend .button;
+  @extend .secondary;
+}
